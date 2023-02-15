@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // не позволяет писать переменные без явного указания типа
+    // но any писать можно, бэд практис
+    "noImplicitAny": true,
+    //поменял было es6
+    "module": "esnext",
+    // в какую спецификацию компилируем: для поддержки большинства браузеров
+    "target": "es5",
+    "jsx": "react-jsx",
+    // позволяет обрабатывать не толькло TS но и JS
+    "allowJs": true,
+    // moduleResolution определяет какие импорты будут
+    "moduleResolution": "node",
+    // Для обсолютного импорта
+    // "baseUrl": ".",
+    // esModuleInterop позволяет работать с пакетами, которые используют
+    // common js как с обычными пакетами с помощью import (requre() module.export) =common js
+    // import Moment from 'moment
+    // console.log(Moment)
+    // без флага esModuleInterop получаем undefined
+    // с флагом esModuleInterop получаем [object Object]
+    "esModuleInterop": true,
+    // Если какая либо библиотека не имеет default import,
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их,
+    // вместо такого импорта  import * as React from 'react',
+    // можно писать import React from 'react'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "lib": [
+    "es2017",
+    "dom"
+  ]
+}
