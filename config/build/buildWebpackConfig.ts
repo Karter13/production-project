@@ -24,7 +24,7 @@ export function buildWebpackConfig(options: BuildOptions): any {
             rules: buildLoaders(options),
         },
         // При импорте не дописывается расширение файлов - import {someFn} from "./test";
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined
     }

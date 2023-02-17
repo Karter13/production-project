@@ -14,7 +14,12 @@
     // moduleResolution определяет какие импорты будут
     "moduleResolution": "node",
     // Для обсолютного импорта
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакетами с помощью import (requre() module.export) =common js
     // import Moment from 'moment
