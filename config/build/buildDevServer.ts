@@ -7,7 +7,8 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         port: options.port,
         open: true,
         // ошибка при маршрутизации
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     }
 
 }

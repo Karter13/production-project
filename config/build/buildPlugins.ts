@@ -1,7 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import path from "path";
 //@ts-ignore
-import webpack, {ProgressPlugin, WebpackPluginInstance, DefinePlugin} from "webpack";
+import webpack, {DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance} from "webpack";
 import {BuildOptions} from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
@@ -18,6 +17,8 @@ export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstanc
         }),
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        })
+        }),
+        new HotModuleReplacementPlugin()
+
     ]
 }
