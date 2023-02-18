@@ -1,3 +1,3 @@
-import AppRooter from './AppRouter'
+import AppRooter from './AppRouter';
 
-export {AppRooter}
+export { AppRooter };
