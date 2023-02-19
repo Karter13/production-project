@@ -5,7 +5,6 @@ export function classNames(
     mods: Mods = {},
     additional: string[] = [],
 ): string {
-    // @ts-ignore
     const filterMods = Object.entries(mods)
         .filter(([className, value]) => Boolean(value))
         .map(([className]) => className);
