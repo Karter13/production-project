@@ -32,6 +32,8 @@
     // вместо такого импорта  import * as React from 'react',
     // можно писать import React from 'react'
     "allowSyntheticDefaultImports": true
+    // для нормального отображения в девтуле
+    //    "sourceMap": true
   },
   "ts-node": {
     "compilerOptions": {
