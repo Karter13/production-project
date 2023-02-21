@@ -5,7 +5,7 @@
     // но any писать можно, бэд практис
     "noImplicitAny": true,
     //поменял было es6
-    "module": "esnext",
+    "module": "ESNext",
     // в какую спецификацию компилируем: для поддержки большинства браузеров
     "target": "es5",
     "jsx": "react-jsx",
@@ -40,6 +40,11 @@
       "module": "CommonJS"
     }
   },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+  ],
   "lib": [
     "es2017",
     "dom"
