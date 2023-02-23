@@ -27,7 +27,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 data-testid="sidebar-toggle"
                 onClick={onToggle}
             >
-                {t('Переключить')}
+                {t('Кнопка')}
             </Button>
 
             <div className={cls.switchers}>
