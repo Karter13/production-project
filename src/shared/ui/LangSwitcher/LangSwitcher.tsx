@@ -4,10 +4,12 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface LangSwitcherProps {
-    className?: string
+    className?: string;
+    // eslint-disable-next-line react/no-unused-prop-types
+    short?: boolean;
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
+export const LangSwitcher: FC<LangSwitcherProps> = ({ className, short }) => {
     const { t, i18n } = useTranslation();
 
     const toggle = async () => {
@@ -20,7 +22,7 @@ export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
             theme={ButtonTheme.CLEAR}
             className={classNames('', {}, [className])}
         >
-            {t('Язык')}
+            {t(short ? 'Короткий язык' : 'Язык')}
         </Button>
     );
 };
