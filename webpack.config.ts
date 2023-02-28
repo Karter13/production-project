@@ -18,7 +18,7 @@ export default (env: BuildEnv) => {
 
     console.log(mode);
 
-    const config: any = buildWebpackConfig({
+    const config: webpack.Configuration = buildWebpackConfig({
         mode,
         paths,
         isDev,
