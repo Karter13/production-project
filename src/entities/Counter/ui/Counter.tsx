@@ -9,11 +9,9 @@ export const Counter: FC = () => {
     const counterValue = useSelector(getCounterValue);
     const { t } = useTranslation();
     const increment = () => {
-        console.log('increment');
         dispatch(counterActions.increment());
     };
     const decrement = () => {
-        console.log('decrement');
         dispatch(counterActions.decrement());
     };
 
