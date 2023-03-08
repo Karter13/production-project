@@ -11,6 +11,7 @@
     "jsx": "react-jsx",
     // позволяет обрабатывать не толькло TS но и JS
     "allowJs": true,
+    "strict": true,
     // moduleResolution определяет какие импорты будут
     "moduleResolution": "node",
     // Для обсолютного импорта
