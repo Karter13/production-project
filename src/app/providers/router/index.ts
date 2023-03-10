@@ -1,3 +1,3 @@
-import AppRooter from './AppRouter';
+import AppRooter from './iu/AppRouter';
 
 export { AppRooter };
